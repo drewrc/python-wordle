@@ -76,7 +76,9 @@ def game(chosen_word):
         if guess == chosen_word or len(already_guessed) == total_guesses:
             end_of_game = True
 
+    #end - if length of #player guesses = max guesses and guess does NOT = chosen word...
     if len(already_guessed) == total_guesses and guess != chosen_word:
+        #display correct word...
         print(f"\033[1;31mWORDLE X/{total_guesses}\033[0m") #red
         print(f"\033[1;32mCorrect Word: {chosen_word}\033[0m") #green
     else:
