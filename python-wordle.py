@@ -23,6 +23,8 @@ total_guesses = 6
 def player_guess(guess, answer):
     wordle = []
     letters_guessed = []
+    # enumerate returns an iterator of tuples containing indices and values from an iterable object, such as a string, list, or tuple
+    #ie. creates index 0123... for word
     for i, letter in enumerate(guess):
 
         #if guess is in correct position and correct place
@@ -78,7 +80,7 @@ def game(chosen_word):
 
     #end - if length of #player guesses = max guesses and guess does NOT = chosen word...
     if len(already_guessed) == total_guesses and guess != chosen_word:
-        #display correct word...
+    #display WORDLE X/# and correct word...
         print(f"\033[1;31mWORDLE X/{total_guesses}\033[0m") #red
         print(f"\033[1;32mCorrect Word: {chosen_word}\033[0m") #green
     else:
